@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+  font-family: 'Oswald', sans-serif;
+  background-color: #bc1d1d;
+  color: #110105;
+}
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+   .lyric-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0;
+    transform: translateY(20px);
+    
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .lyric-section:hover {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .lyric-section p {
+    font-size: 60px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+/*-----------------SECTION 1----------------- */
+
+
+  #section1 {
+    background-color: #f4c2c2; 
+    border-bottom: 2px solid #4d2630; 
+    padding: 20px;
+}
+
+#section1 p {
+    font-size: 60px; 
+    letter-spacing: 2px;
+    transition: color 2s ease-in-out;
+}
+
+#section1 .rotate {
+    color: #ff0000;
+    display: inline-block;
+    transition: transform 5s ease;
+}
+
+#section1 .rotate:hover {
+    transform: rotate(360deg);
+}
+
+#section1 .slant {
+    color: rgb(255, 0, 0);
+    display: inline-block;
+    transition: transform 2s ease;
+}
+
+#section1 .slant:hover {
+    transform: skewY(45deg);
+}
+
+#section1 p:hover {
+    color: #000;
+}
+
+#section1 .shift-down {
+    color: rgb(157, 157, 157);
+    display: inline-block;
+    transition: transform 2s ease;
+    transform: translateY(0);
+}
+
+#section1 .shift-down:hover {
+    transform: translateY(30px);
+}
+
+/*-----------------SECTION 2----------------- */
+
+#section2 {
+    background-color: #d5a9a9;
+    padding: 20px;
+  }
+
+#section2 .scale-up {
+    color: #ff0000; 
+    display: inline-block;
+    transition: transform 1s ease, color 1s ease;
+  }
+
+#section2 .scale-up:hover {
+    transform: scale(1.2);
+    color: #8e5050; 
+  }
+
+#section2 .bounce {
+    color: #448044;
+    display: inline-block;
+    transition: transform 3s ease;
+  }
+
+#section2 .bounce:hover {
+    animation: bounceAnimation 3s;
+  }
+  
+  @keyframes bounceAnimation {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+  }
+
+  /*-----------------SECTION 3----------------- */
+
+  #section3 {
+    background-color: #bc1d1d; 
+    padding: 20px;
+  }
+  
+  #section3 p {
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  
+  #section3 .highlight {
+    color: #ffffff; 
+    display: inline-block; 
+    transition: transform 0.5s ease, color 0.5s ease;
+  }
+  
+  #section3 .highlight:hover {
+    transform: scale(1.2);
+    color: #ffcc00; 
+  }
+
+  /*-----------------SECTION 4----------------- */
+
+  #section4 {
+    background-color: #9b7c7c;  
+    padding: 20px;
+  }
+  
+  #section4 p {
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  
+  #section4 .underline {
+    color: #ff0000;  
+    display: inline-block;
+    position: relative;
+    transition: color 0.5s ease;
+  }
+  
+  #section4 .underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #524d50;
+    transition: width 1s ease;
+  }
+  
+  #section4 .underline:hover::after {
+    width: 100%;
+  }
+  
+  
+  #section4 .glow {
+    color: #ff0000;
+    display: inline-block;
+    transition: text-shadow 1s ease;
+  }
+  
+  #section4 .glow:hover {
+    text-shadow: 0 0 30px #ff9292;
+  }
+
+/*-----------------SECTION 5----------------- */
+
+#section5 {
+  background-color: #bc1d1d; 
+  padding: 20px;
+}
+
+#section5 p {
+  font-size: 60px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+#section5 .keyword-hate,
+#section5 .keyword-bad {
+  display: inline-block;
+  color: #ffffff; 
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+#section5 .keyword-hate:hover,
+#section5 .keyword-bad:hover {
+  transform: scale(1.2);
+  color: #ffcc00;  
+}
+
+
+#section5 .keyword-passed {
+  display: inline-block;
+  color: #ffffff;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+#section5 .keyword-passed:hover {
+  transform: rotate(-10deg);
+  color: #ffcc00;
+}
+
+
+#section5 .keyword-answer {
+  display: inline-block;
+  color: #ffffff;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+#section5 .keyword-answer:hover {
+  transform: translateY(10px);
+  color: #ffcc00;
+}
+
+/*-----------------SECTION 6----------------- */
+
+#section6 {
+  background-color: #775f5f;  
+  padding: 20px;
+}
+
+#section6 p {
+  font-size: 60px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+#section6 .keyword-pad {
+  display: inline-block;
+  color: #ff0000;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+#section6 .keyword-pad:hover {
+  transform: rotate(-5deg);
+  color: #ff6600;
+}
+
+
+#section6 .keyword-wrong {
+  display: inline-block;
+  color: #ff0000;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+#section6 .keyword-wrong:hover {
+  transform: scale(1.2);
+  color: #ff6600;
+}
+
+#section6 .keyword-home {
+  display: inline-block;
+  color: #ff0000;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+#section6 .keyword-home:hover {
+  transform: translateY(-10px);
+  color: #ff6600;
+}
+
+/*-----------------SECTION 7----------------- */
+
+#section7 {
+  background-color: #bc1d1d; 
+  padding: 20px;
+}
+
+#section7 p {
+  font-size: 60px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#section7 .keyword-october {
+  color: #ff8000;
+  display: inline-block;
+  transition: transform 1s ease;
+}
+#section7 .keyword-october:hover {
+  transform: translateY(-50px);
+}
+
+
+#section7 .keyword-november {
+  color: #b95d01;
+  display: inline-block;
+  transition: transform 1s ease;
+}
+#section7 .keyword-november:hover {
+  transform: translateY(50px);
+}
+
+#section7 .keyword-december {
+  color: #773c00;
+  display: inline-block;
+  transition: transform 1s ease;
+}
+#section7 .keyword-december:hover {
+  transform: translateY(-50px);
+}
+
+#section7 .keyword-gone {
+  color: #5e331a;
+  display: inline-block;
+  transition: opacity 1s ease;
+}
+#section7 .keyword-gone:hover {
+  opacity: 0;
+}
+
+#section7 .keyword-mom {
+  display: inline-block;
+
+  animation: fadeInOut 9s infinite ease;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
